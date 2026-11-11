@@ -48,7 +48,7 @@
       "name": "Camera",
       "position": [
         0,
-        0,
+        2,
         0
       ],
       "rotation": [
@@ -98,7 +98,7 @@
       "id": "ca820224-5525-478d-8891-8c3f512ec320",
       "position": [
         0,
-        -0.7,
+        0,
         -2
       ],
       "rotation": [
@@ -108,9 +108,9 @@
         1
       ],
       "scale": [
-        0.6,
-        0.6,
-        0.6
+        1,
+        1,
+        1
       ],
       "geometry": {
         "type": "plane",
