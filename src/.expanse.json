@@ -41,11 +41,14 @@
       "components": {},
       "geometry": null,
       "id": "a608ddd9-9379-464d-966f-5d8d8674c83c",
-      "material": null,
+      "material": {
+        "type": "basic",
+        "color": "#FFFFFF"
+      },
       "name": "Camera",
       "position": [
         0,
-        2,
+        0,
         0
       ],
       "rotation": [
@@ -95,8 +98,8 @@
       "id": "ca820224-5525-478d-8891-8c3f512ec320",
       "position": [
         0,
-        0,
-        -5
+        -0.7,
+        -2
       ],
       "rotation": [
         0,
@@ -105,9 +108,9 @@
         1
       ],
       "scale": [
-        1.5,
-        1.5,
-        1.5
+        0.6,
+        0.6,
+        0.6
       ],
       "geometry": {
         "type": "plane",
@@ -115,7 +118,7 @@
         "height": 1
       },
       "material": {
-        "type": "basic",
+        "type": "unlit",
         "color": "#ffffff",
         "textureSrc": {
           "type": "asset",
@@ -129,11 +132,7 @@
       "parentId": "88453035-dc0f-486d-868a-8ff7c2fda864",
       "components": {},
       "name": "Plano",
-      "order": 2.501964491221117,
-      "shadow": {
-        "castShadow": true,
-        "receiveShadow": false
-      }
+      "order": 2.501964491221117
     }
   },
   "spaces": {
