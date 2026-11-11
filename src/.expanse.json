@@ -102,10 +102,10 @@
         2
       ],
       "rotation": [
-        5.551115123125784e-17,
         0,
-        5.421010862427525e-20,
-        1
+        1,
+        0,
+        0
       ],
       "scale": [
         2,
@@ -127,6 +127,8 @@
         "opacity": 1,
         "blending": "additive",
         "side": "double",
+        "depthTest": false,
+        "depthWrite": false,
         "opacityMap": null,
         "normalMap": null
       },
