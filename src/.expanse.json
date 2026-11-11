@@ -48,14 +48,14 @@
       "name": "Camera",
       "position": [
         0,
-        3,
-        3
+        0,
+        0
       ],
       "rotation": [
-        0.00044368872331410124,
-        0.9659425615285845,
-        -0.25875089860082223,
-        0.0016563336561801576
+        0.02467821616233751,
+        0.9697036757640816,
+        -0.2164243965155963,
+        0.11057236295536932
       ],
       "scale": [
         1,
@@ -109,7 +109,7 @@
       ],
       "scale": [
         1.9999999999999998,
-        1.9999999999999993,
+        1.9999999999999991,
         2
       ],
       "geometry": {
@@ -122,12 +122,11 @@
         "color": "#ffffff",
         "textureSrc": {
           "type": "asset",
-          "asset": "assets/COSO_BAILANDO_PANTALLA_VERDE.mp4"
+          "asset": "assets/COSO_BAILANDO_PNG.mp4"
         },
         "opacity": 1,
-        "blending": "normal",
+        "blending": "additive",
         "side": "double",
-        "forceTransparent": true,
         "depthTest": false,
         "depthWrite": false,
         "opacityMap": null,
@@ -139,13 +138,7 @@
         "speed": 1
       },
       "parentId": "a608ddd9-9379-464d-966f-5d8d8674c83c",
-      "components": {
-        "c4f066ce-6270-413a-a112-842b9d7f3b58": {
-          "id": "c4f066ce-6270-413a-a112-842b9d7f3b58",
-          "name": "example-component",
-          "parameters": {}
-        }
-      },
+      "components": {},
       "name": "Plano",
       "order": 2.504405666137165
     }
