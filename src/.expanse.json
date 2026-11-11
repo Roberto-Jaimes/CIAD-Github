@@ -98,8 +98,8 @@
       "id": "ca820224-5525-478d-8891-8c3f512ec320",
       "position": [
         0,
-        0,
-        -2
+        1,
+        5
       ],
       "rotation": [
         0,
@@ -124,12 +124,13 @@
           "type": "asset",
           "asset": "assets/COSO_BAILANDO_PNG.mp4"
         },
-        "blending": "additive",
+        "opacity": 1,
+        "blending": "normal",
         "side": "double",
         "opacityMap": null,
         "normalMap": null
       },
-      "parentId": "88453035-dc0f-486d-868a-8ff7c2fda864",
+      "parentId": "a608ddd9-9379-464d-966f-5d8d8674c83c",
       "components": {},
       "name": "Plano",
       "order": 2.501964491221117
