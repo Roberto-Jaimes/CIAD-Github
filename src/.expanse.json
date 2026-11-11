@@ -130,19 +130,8 @@
         "opacityMap": null,
         "normalMap": null
       },
-      "parentId": "a608ddd9-9379-464d-966f-5d8d8674c83c",
-      "components": {
-        "c4f066ce-6270-413a-a112-842b9d7f3b58": {
-          "id": "c4f066ce-6270-413a-a112-842b9d7f3b58",
-          "name": "tap-to-place",
-          "parameters": {
-            "target": {
-              "type": "entity",
-              "id": "ca820224-5525-478d-8891-8c3f512ec320"
-            }
-          }
-        }
-      },
+      "parentId": "88453035-dc0f-486d-868a-8ff7c2fda864",
+      "components": {},
       "name": "Plano",
       "order": 2.501964491221117
     }
