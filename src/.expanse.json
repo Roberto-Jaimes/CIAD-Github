@@ -97,19 +97,19 @@
     "ca820224-5525-478d-8891-8c3f512ec320": {
       "id": "ca820224-5525-478d-8891-8c3f512ec320",
       "position": [
-        0,
-        0,
-        3
+        1.0148453025856734,
+        0.5006075931113347,
+        -1.3270228342599584
       ],
       "rotation": [
-        0,
-        1,
-        0,
-        0
+        -0.2587508986008223,
+        -0.0016563336561801576,
+        -0.00044368872331410135,
+        0.9659425615285845
       ],
       "scale": [
         2,
-        2,
+        1.9999999999999998,
         2
       ],
       "geometry": {
@@ -122,11 +122,12 @@
         "color": "#ffffff",
         "textureSrc": {
           "type": "asset",
-          "asset": "assets/COSO_BAILANDO_PNG.mp4"
+          "asset": "assets/COSO_BAILANDO_PANTALLA_VERDE.mp4"
         },
         "opacity": 1,
-        "blending": "additive",
+        "blending": "normal",
         "side": "double",
+        "forceTransparent": true,
         "depthTest": false,
         "depthWrite": false,
         "opacityMap": null,
@@ -137,10 +138,16 @@
         "paused": false,
         "speed": 1
       },
-      "parentId": "a608ddd9-9379-464d-966f-5d8d8674c83c",
-      "components": {},
+      "parentId": "88453035-dc0f-486d-868a-8ff7c2fda864",
+      "components": {
+        "c4f066ce-6270-413a-a112-842b9d7f3b58": {
+          "id": "c4f066ce-6270-413a-a112-842b9d7f3b58",
+          "name": "example-component",
+          "parameters": {}
+        }
+      },
       "name": "Plano",
-      "order": 3.0215863150647815
+      "order": 2.504405666137165
     }
   },
   "spaces": {
