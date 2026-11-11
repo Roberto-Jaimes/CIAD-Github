@@ -98,8 +98,8 @@
       "id": "ca820224-5525-478d-8891-8c3f512ec320",
       "position": [
         0,
-        1.0000000000000007,
-        0
+        0,
+        2
       ],
       "rotation": [
         5.551115123125784e-17,
@@ -130,7 +130,12 @@
         "opacityMap": null,
         "normalMap": null
       },
-      "parentId": "88453035-dc0f-486d-868a-8ff7c2fda864",
+      "videoControls": {
+        "loop": true,
+        "paused": false,
+        "speed": 1
+      },
+      "parentId": "a608ddd9-9379-464d-966f-5d8d8674c83c",
       "components": {},
       "name": "Plano",
       "order": 3.0215863150647815
