@@ -116,19 +116,24 @@
       },
       "material": {
         "type": "basic",
-        "color": "#FFFFFF",
+        "color": "#ffffff",
         "textureSrc": {
           "type": "asset",
           "asset": "assets/COSO_BAILANDO_PNG.mp4"
         },
-        "blending": "normal",
+        "blending": "additive",
         "side": "double",
-        "opacity": 1
+        "opacityMap": null,
+        "normalMap": null
       },
       "parentId": "88453035-dc0f-486d-868a-8ff7c2fda864",
       "components": {},
       "name": "Plano",
-      "order": 2.501964491221117
+      "order": 2.501964491221117,
+      "shadow": {
+        "castShadow": true,
+        "receiveShadow": false
+      }
     }
   },
   "spaces": {
