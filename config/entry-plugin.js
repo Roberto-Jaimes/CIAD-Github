@@ -10,7 +10,83 @@ import scene from './.expanse.json'
 delete scene.history
 delete scene.historyVersion
 
-window.ecs.application.init(scene)
+const CAMERA_LOCK_KEY = 'ciad-camera-lock'
+const CAMERA_LOCK_TTL = 15000
+const cameraLockId = Date.now() + '-' + Math.random()
+
+const getCameraLock = () => {
+  const storedLock = localStorage.getItem(CAMERA_LOCK_KEY)
+  return storedLock ? JSON.parse(storedLock) : null
+}
+
+const hasCameraLock = () => {
+  const currentLock = getCameraLock()
+  const lockIsActive = currentLock &&
+    Date.now() - currentLock.updatedAt < CAMERA_LOCK_TTL
+
+  if (lockIsActive && currentLock.id !== cameraLockId) {
+    return false
+  }
+
+  localStorage.setItem(CAMERA_LOCK_KEY, JSON.stringify({
+    id: cameraLockId,
+    updatedAt: Date.now(),
+  }))
+  return true
+}
+
+const releaseCameraLock = () => {
+  const currentLock = getCameraLock()
+  if (currentLock && currentLock.id === cameraLockId) {
+    localStorage.removeItem(CAMERA_LOCK_KEY)
+  }
+}
+
+const setCameraActive = (active) => {
+  const xr8 = window.XR8
+  if (xr8) {
+    if (active && typeof xr8.resume === 'function') {
+      xr8.resume()
+    } else if (!active && typeof xr8.pause === 'function') {
+      xr8.pause()
+    }
+  }
+
+  document.querySelectorAll('video').forEach((video) => {
+    if (active) {
+      video.play().catch((error) => {
+        console.warn('No se pudo reanudar el video:', error)
+      })
+    } else {
+      video.pause()
+    }
+  })
+}
+
+if (!hasCameraLock()) {
+  document.body.innerHTML = '<p>La cámara ya está siendo usada por otra pestaña.</p>'
+} else {
+  window.ecs.application.init(scene)
+
+  const lockHeartbeat = setInterval(() => {
+    const currentLock = getCameraLock()
+    if (currentLock && currentLock.id === cameraLockId) {
+      localStorage.setItem(CAMERA_LOCK_KEY, JSON.stringify({
+        id: cameraLockId,
+        updatedAt: Date.now(),
+      }))
+    }
+  }, CAMERA_LOCK_TTL / 3)
+
+  window.addEventListener('beforeunload', () => {
+    clearInterval(lockHeartbeat)
+    releaseCameraLock()
+  })
+
+  document.addEventListener('visibilitychange', () => {
+    setCameraActive(document.visibilityState === 'visible')
+  })
+}
 
 if (module.hot) {
   const isInline = window.location.href.includes('liveSyncMode=inline')
