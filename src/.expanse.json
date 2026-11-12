@@ -122,10 +122,10 @@
         "color": "#ffffff",
         "textureSrc": {
           "type": "asset",
-          "asset": "assets/COSO_BAILANDO_PNG.mp4"
+          "asset": "assets/COSO_BAILANDO_PANTALLA_VERDE.mp4"
         },
         "opacity": 1,
-        "blending": "additive",
+        "blending": "no",
         "side": "double",
         "depthTest": false,
         "depthWrite": false,
@@ -135,10 +135,17 @@
       "videoControls": {
         "loop": true,
         "paused": false,
-        "speed": 1
+        "speed": 1,
+        "positional": true
       },
       "parentId": "a608ddd9-9379-464d-966f-5d8d8674c83c",
-      "components": {},
+      "components": {
+        "2871a5c6-d6f6-45d7-b5f4-e7867b80908f": {
+          "id": "2871a5c6-d6f6-45d7-b5f4-e7867b80908f",
+          "name": "chroma-key",
+          "parameters": {}
+        }
+      },
       "name": "Plano",
       "order": 2.504405666137165
     }
